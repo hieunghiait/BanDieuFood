@@ -14,10 +14,8 @@
                     <nav class="main-menu">
                         <ul>
                             <li class="current-list-item">
-                                <a href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                                </ul>
+                                <a href="@Url.Action("Index", "Home")">Home</a>
+                               
                             </li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>
