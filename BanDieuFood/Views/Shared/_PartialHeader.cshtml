@@ -28,16 +28,9 @@
                                     <li>@Html.ActionLink("Product", "Index", "Product")</li>
                                 </ul>
                             </li>
+                            <li><a>@Html.ActionLink("Contact", "Contact", "Home")</a></li>
                             <li>
-                                <a href="news.html">News</a>
-                                <ul class="sub-menu">
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="single-news.html">Single News</a></li>
-                                </ul>
-                            </li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>
-                                <a href="shop.html">Shop</a>
+                                <a href="@Html.Action("Index", "Product")">Shop</a>
                                 <ul class="sub-menu">
                                     <li>@Html.ActionLink("Product", "Index", "Product")</li>
                                     <li>@Html.ActionLink("Check out", "Index", "Checkout")</li>
