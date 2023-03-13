@@ -5,7 +5,7 @@
                 <div class="main-menu-wrap">
                     <!-- logo -->
                     <div class="site-logo">
-                        <a href="index.html">
+                        <a href="@Url.Action("Index", "Home")">
                             <img src="~/assets/img/logo.png" alt="">
                         </a>
                     </div>
@@ -23,14 +23,26 @@
                                 <ul class="sub-menu">
                                     <li>@Html.ActionLink("About", "About", "Home")</li>
                                     <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
-                                    <li>@Html.ActionLink("Checkout", "Index", "Index")</li>
+                                    <li>@Html.ActionLink("Checkout", "Index", "Checkout")</li>
                                     <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
                                     <li>@Html.ActionLink("Product", "Index", "Product")</li>
                                 </ul>
                             </li>
                             <li><a>@Html.ActionLink("Contact", "Contact", "Home")</a></li>
                             <li>
+
                                 <a href="@Html.Action("Index", "Product")">Shop</a>
+
+                                <a href="news.html">News</a>
+                                <ul class="sub-menu">
+                                    <li><a href="news.html">News</a></li>
+                                    <li><a href="single-news.html">Single News</a></li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>
+                                <a href="@Url.Action("Index", "Product")">Shop</a>
+
                                 <ul class="sub-menu">
                                     <li>@Html.ActionLink("Product", "Index", "Product")</li>
                                     <li>@Html.ActionLink("Check out", "Index", "Checkout")</li>
@@ -40,7 +52,7 @@
                             </li>
                             <li>
                                 <div class="header-icons">
-                                    <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                    <a class="shopping-cart" href="@Url.Action("Index", "Cart")"><i class="fas fa-shopping-cart"></i></a>
                                     <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                                 </div>
                             </li>
