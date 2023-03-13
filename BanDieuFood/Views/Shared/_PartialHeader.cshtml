@@ -28,7 +28,11 @@
                                     <li>@Html.ActionLink("Product", "Index", "Product")</li>
                                 </ul>
                             </li>
+                            <li><a>@Html.ActionLink("Contact", "Contact", "Home")</a></li>
                             <li>
+
+                                <a href="@Html.Action("Index", "Product")">Shop</a>
+
                                 <a href="news.html">News</a>
                                 <ul class="sub-menu">
                                     <li><a href="news.html">News</a></li>
@@ -38,6 +42,7 @@
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>
                                 <a href="@Url.Action("Index", "Product")">Shop</a>
+
                                 <ul class="sub-menu">
                                     <li>@Html.ActionLink("Product", "Index", "Product")</li>
                                     <li>@Html.ActionLink("Check out", "Index", "Checkout")</li>
