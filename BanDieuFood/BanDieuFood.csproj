@@ -1897,6 +1897,7 @@
     <Content Include="AssetsClient\img\avaters\avatar2.png" />
     <Content Include="AssetsClient\img\avaters\avatar3.png" />
     <Content Include="AssetsClient\img\avaters\avtThien.jpg" />
+    <Content Include="AssetsClient\img\bg.jpg" />
     <Content Include="AssetsClient\img\breadcrumb-bg.jpg" />
     <Content Include="AssetsClient\img\company-logos\1.png" />
     <Content Include="AssetsClient\img\company-logos\2.png" />
@@ -1916,6 +1917,7 @@
     <Content Include="AssetsClient\img\latest-news\news-bg-4.jpg" />
     <Content Include="AssetsClient\img\latest-news\news-bg-5.jpg" />
     <Content Include="AssetsClient\img\latest-news\news-bg-6.jpg" />
+    <Content Include="AssetsClient\img\logo-hatdieu.png" />
     <Content Include="AssetsClient\img\logo.png" />
     <Content Include="AssetsClient\img\products\product-img-1.jpg" />
     <Content Include="AssetsClient\img\products\product-img-2.jpg" />
