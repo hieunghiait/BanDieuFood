@@ -1892,9 +1892,11 @@
     <Content Include="AssetsClient\img\1.jpg" />
     <Content Include="AssetsClient\img\a.jpg" />
     <Content Include="AssetsClient\img\abt.jpg" />
+    <Content Include="AssetsClient\img\avaters\Anhthe.jpg" />
     <Content Include="AssetsClient\img\avaters\avatar1.png" />
     <Content Include="AssetsClient\img\avaters\avatar2.png" />
     <Content Include="AssetsClient\img\avaters\avatar3.png" />
+    <Content Include="AssetsClient\img\avaters\avtThien.jpg" />
     <Content Include="AssetsClient\img\breadcrumb-bg.jpg" />
     <Content Include="AssetsClient\img\company-logos\1.png" />
     <Content Include="AssetsClient\img\company-logos\2.png" />
@@ -1921,6 +1923,7 @@
     <Content Include="AssetsClient\img\products\product-img-4.jpg" />
     <Content Include="AssetsClient\img\products\product-img-5.jpg" />
     <Content Include="AssetsClient\img\products\product-img-6.jpg" />
+    <Content Include="AssetsClient\img\sale.jpg" />
     <Content Include="AssetsClient\img\team\team-1.jpg" />
     <Content Include="AssetsClient\img\team\team-2.jpg" />
     <Content Include="AssetsClient\img\team\team-3.jpg" />
@@ -2217,6 +2220,7 @@
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Shared\_Error404Custom.cshtml" />
+    <Content Include="Views\Shared\_IntroductionPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

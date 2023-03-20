@@ -7,7 +7,7 @@
     <meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
     <!-- title -->
-    <title>Fruitkha</title>
+    <title>Binh Phuoc Food</title>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="~/AssetsClient/img/favicon.png">
     <!-- google font -->
@@ -57,40 +57,35 @@
                         <nav class="main-menu">
                             <ul>
                                 <li class="current-list-item">
-                                    <a href=@Url.Action("Index", "Home")>Home</a>
-                                    @*<ul class="sub-menu">
-                                        <li><a href="index.html">Static Home</a></li>
-                                        <li><a href="index_2.html">Slider Home</a></li>
-                                    </ul>*@
+                                    <a href=@Url.Action("Index", "Home")>Trang chủ</a>
                                 </li>
-                                <li><a href=@Url.Action("About", "Home")>About</a></li>
+                                <li><a href=@Url.Action("About", "Home")>Giới thiệu</a></li>
                                 <li>
                                     <a href="#">Pages</a>
                                     <ul class="sub-menu">
-                                        <li><a href="404.html">404 page</a></li>
-                                        <li><a href=@Url.Action("About", "Home")>About</a></li>
-                                        <li><a href=@Url.Action("Index", "Cart")>Cart</a></li>
+                                        <li><a href=@Url.Action("About", "Home")>Giới thiệu</a></li>
+                                        <li><a href=@Url.Action("Index", "Cart")>Giỏ hàng</a></li>
                                         <li><a href=@Url.Action("Checkout", "Cart")>Check Out</a></li>
-                                        <li><a href=@Url.Action("Contact", "Home")>Contact</a></li>
-                                        <li><a href=@Url.Action("News", "Home")>News</a></li>
+                                        <li><a href=@Url.Action("Contact", "Home")>Liên hệ</a></li>
+                                        <li><a href=@Url.Action("News", "Home")>Tin tức về sản phẩm</a></li>
                                         <li><a href=@Url.Action("Index", "Product")</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href=@Url.Action("News", "Home")>News</a>
+                                    <a href="#">Tin tức</a>
                                     <ul class="sub-menu">
-                                        <li><a href=@Url.Action("News", "Home")>News</a></li>
-                                        <li><a href=@Url.Action("SingleNews", "Home")>Single News</a></li>
+                                        <li><a href=@Url.Action("News", "Home")>Tin tức về sản phẩm</a></li>
+                                        <li><a href=@Url.Action("SingleNews", "Home")>Chi tiết</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=@Url.Action("Contact", "Home")>Contact</a></li>
+                                <li><a href=@Url.Action("Contact", "Home")>Liên hệ</a></li>
                                 <li>
-                                    <a href=@Url.Action("Index", "Product")>Shop</a>
+                                    <a href=@Url.Action("Index", "Product")>Sản phẩm</a>
                                     <ul class="sub-menu">
-                                        <li><a href=@Url.Action("Index", "Product")>Shop</a></li>
-                                        <li><a href=@Url.Action("Checkout", "Cart")>Check Out</a></li>
-                                        <li><a href=@Url.Action("SingleNews", "Home")>Single Product</a></li>
-                                        <li><a href=@Url.Action("Index", "Cart")>Cart</a></li>
+                                        <li><a href=@Url.Action("Index", "Product")>Sản phẩm</a></li>
+                                        <li><a href=@Url.Action("Checkout", "Cart")>Kiểm tra</a></li>
+                                        <li><a href=@Url.Action("SingleNews", "Home")>Chi tiết sản phẩm</a></li>
+                                        <li><a href=@Url.Action("Index", "Cart")>Giỏ hàng</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -118,9 +113,9 @@
                     <span class="close-btn"><i class="fas fa-window-close"></i></span>
                     <div class="search-bar">
                         <div class="search-bar-tablecell">
-                            <h3>Search For:</h3>
+                            <h3>Tìm kiếm:</h3>
                             <input type="text" placeholder="Keywords">
-                            <button type="submit">Search <i class="fas fa-search"></i></button>
+                            <button type="submit">Tìm kiếm <i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -170,7 +165,7 @@
                     <div class="footer-box get-in-touch">
                         <h2 class="widget-title">Địa điểm</h2>
                         <ul>
-                            <li>34/8, East Hukupara, Gifirtok, Sadan.</li>
+                            <li>Bình phước, Việt Nam</li>
                             <li>binhphuocfood@gmail.com</li>
                             <li>+84399864429</li>
                         </ul>
@@ -180,11 +175,11 @@
                     <div class="footer-box pages">
                         <h2 class="widget-title">Trang</h2>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href=@Url.Action("Home", "About")>About</a></li>
-                            <li><a href="services.html">Shop</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href=@Url.Action("Index", "Home")>Trang chủ</a></li>
+                            <li><a href=@Url.Action("About", "Home")>Giới thiệu</a></li>
+                            <li><a href=@Url.Action("Index", "Product")>Sản phẩm</a></li>
+                            <li><a href=@Url.Action("News", "Home")>Tin tức</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -208,8 +203,8 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <p>
-                        Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
-                        Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+                        Bản quyền &copy; 2023 - <a href="https://imransdesign.com/">Binh Phuoc Food</a>,  All Rights Reserved.<br>
+                        
                     </p>
                 </div>
                 <div class="col-lg-6 text-right col-md-12">

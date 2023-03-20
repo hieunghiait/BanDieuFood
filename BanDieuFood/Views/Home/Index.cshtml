@@ -10,11 +10,11 @@
             <div class="col-lg-9 offset-lg-2 text-center">
                 <div class="hero-text">
                     <div class="hero-text-tablecell">
-                        <p class="subtitle">Chất lượng dẫn đầu</p>
+                        <p class="subtitle">Chất lượng đi đầu</p>
                         <h1>Binh Phuoc Food</h1>
                         <div class="hero-btns">
-                            <a href="shop.html" class="boxed-btn">Sản phẩm</a>
-                            <a href="contact.html" class="bordered-btn">Liên hệ</a>
+                            <a href=@Url.Action("Index", "Product") class="boxed-btn">Sản phẩm</a>
+                            <a href=@Url.Action("Contact", "Home ") class="bordered-btn">Liên hệ</a>
                         </div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@
                         <i class="fas fa-shipping-fast"></i>
                     </div>
                     <div class="content">
-                        <h3>Free Shipping</h3>
-                        <p>When order over $75</p>
+                        <h3>Miễn phí vận chuyển</h3>
+                        <p>Khi đặt hàng đến 1 triệu đồng</p>
                     </div>
                 </div>
             </div>
@@ -45,8 +45,8 @@
                         <i class="fas fa-phone-volume"></i>
                     </div>
                     <div class="content">
-                        <h3>24/7 Support</h3>
-                        <p>Get support all day</p>
+                        <h3>Hỗ trợ 24/7</h3>
+                        <p>Hỗ trợ cả ngày</p>
                     </div>
                 </div>
             </div>
@@ -56,8 +56,8 @@
                         <i class="fas fa-sync"></i>
                     </div>
                     <div class="content">
-                        <h3>Refund</h3>
-                        <p>Get refund within 3 days!</p>
+                        <h3>Hoàn tiền</h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -71,8 +71,8 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="section-title">
-                    <h3><span class="orange-text">Our</span> Products</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+                    <h3 class="Product">Sản phẩm</h3>
+                    <p>Sản phẩm sấy khô, thơm ngon đến từ vùng đất Bình Phước.</p>
                 </div>
             </div>
         </div>
@@ -83,9 +83,9 @@
                     <div class="product-image">
                         <a href="single-product.html"><img src="~/AssetsClient/img/products/product-img-1.jpg" alt=""></a>
                     </div>
-                    <h3>Strawberry</h3>
+                    <h3>Điều sấy khô</h3>
                     <p class="product-price"><span>Per Kg</span> 85$ </p>
-                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
@@ -93,9 +93,9 @@
                     <div class="product-image">
                         <a href="single-product.html"><img src="~/AssetsClient/img/products/product-img-2.jpg" alt=""></a>
                     </div>
-                    <h3>Berry</h3>
+                    <h3>Điều rang muối</h3>
                     <p class="product-price"><span>Per Kg</span> 70$ </p>
-                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
@@ -103,9 +103,9 @@
                     <div class="product-image">
                         <a href="single-product.html"><img src="~/AssetsClient/img/products/product-img-3.jpg" alt=""></a>
                     </div>
-                    <h3>Lemon</h3>
+                    <h3>Điều rang muối cháy tỏi</h3>
                     <p class="product-price"><span>Per Kg</span> 35$ </p>
-                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                 </div>
             </div>
         </div>
@@ -122,79 +122,28 @@
                     <div class="price-box">
                         <div class="inner-price">
                             <span class="price">
-                                <strong>30%</strong> <br> off per kg
+                                <strong>30%</strong> <br> cho 70gram
                             </span>
                         </div>
                     </div>
-                    <img src="~/AssetsClient/img/a.jpg" alt="">
+                    <img src="~/AssetsClient/img/sale.jpg" alt="">
                 </div>
             </div>
             <!--Content Column-->
             <div class="content-column col-lg-6">
-                <h3><span class="orange-text">Deal</span> of the month</h3>
-                <h4>Hikan Strwaberry</h4>
-                <div class="text">Quisquam minus maiores repudiandae nobis, minima saepe id, fugit ullam similique! Beatae, minima quisquam molestias facere ea. Perspiciatis unde omnis iste natus error sit voluptatem accusant</div>
+                <h3><span class="orange-text">Deal shock</span> 03/2023</h3>
+                <h4>Điều rang muối cháy tỏi</h4>
+                <div class="text">Vị tỏi ớt thơm ngon, kích thích vị giác khiến người ăn thích thú trên mỗi hạt điều rang. <strong>Hạt điều tỏi ớt Vinahe</strong> gói 70g béo ngậy, thơm ngon đóng gói theo dạng túi zip, dễ mở, dễ bào quản sau sử dụng. Khối lượng không quá nhiều vưới 70g, luôn đảm bảo độ giòn ngon  khi sử dụng trong thời gian hợp lý.</div>
                 <!--Countdown Timer-->
-                <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2020/2/01"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
-                <a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2023/4/01"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
+                <a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng</a>
             </div>
         </div>
     </div>
 </section>
 <!-- end cart banner section -->
 <!-- testimonail-section -->
-<div class="testimonail-section mt-150 mb-150">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1 text-center">
-                <div class="testimonial-sliders">
-                    <div class="single-testimonial-slider">
-                        <div class="client-avater">
-                            <img src="~/AssetsClient/img/avaters/avatar1.png" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h3>Saira Hakim <span>Local shop owner</span></h3>
-                            <p class="testimonial-body">
-                                " Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-                            </p>
-                            <div class="last-icon">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-testimonial-slider">
-                        <div class="client-avater">
-                            <img src="~/AssetsClient/img/avaters/avatar2.png" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h3>David Niph <span>Local shop owner</span></h3>
-                            <p class="testimonial-body">
-                                " Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-                            </p>
-                            <div class="last-icon">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-testimonial-slider">
-                        <div class="client-avater">
-                            <img src="~/AssetsClient/img/avaters/avatar3.png" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h3>Jacob Sikim <span>Local shop owner</span></h3>
-                            <p class="testimonial-body">
-                                " Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-                            </p>
-                            <div class="last-icon">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@Html.Partial("_IntroductionPartial")
 <!-- end testimonail-section -->
 <!-- advertisement section -->
 <div class="abt-section mb-150">
@@ -207,11 +156,11 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="abt-text">
-                    <p class="top-sub">Since Year 1999</p>
-                    <h2>We are <span class="orange-text">Fruitkha</span></h2>
-                    <p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-                    <a href="about.html" class="boxed-btn mt-4">know more</a>
+                    <p class="top-sub">Sáng lập năm 2023</p>
+                    <h2><span class="orange-text">Binh Phuoc Food</span></h2>
+                    <p>123123123</p>
+                    <p>123123123</p>
+                    <a href="about.html" class="boxed-btn mt-4">Chi tiết</a>
                 </div>
             </div>
         </div>
@@ -219,13 +168,13 @@
 </div>
 <!-- end advertisement section -->
 <!-- shop banner -->
-<section class="shop-banner">
+@*<section class="shop-banner">
     <div class="container">
         <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
         <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
         <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
     </div>
-</section>
+</section>*@
 <!-- end shop banner -->
 <!-- latest news -->
 <div class="latest-news pt-150 pb-150">
