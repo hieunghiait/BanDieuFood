@@ -8,27 +8,34 @@ namespace BanDieuFood.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
         }
         public ActionResult About()
         {
-
-
             return View();
-        }
-        public ActionResult Error404()
-        {
 
-
-            return View();
         }
-        public ActionResult Contact() 
+        public ActionResult SingleNews()
         {
             return View();
+        }
+        public ActionResult New()
+        {
+            return View();
+
+        }
+        public ActionResult News()
+        {
+            return View();
+
+        }
+        public ActionResult Contact()
+        {
+            return View();
+
         }
     }
 }

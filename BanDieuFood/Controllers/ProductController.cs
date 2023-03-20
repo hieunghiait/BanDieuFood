@@ -13,7 +13,7 @@ namespace BanDieuFood.Controllers
         {
             return View();
         }
-        public ActionResult ProductDetail()
+        public ActionResult SingleProduct()
         {
             return View();
         }
