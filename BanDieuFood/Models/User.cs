@@ -28,9 +28,12 @@
         public string UserName { get; set; }
         [Required(ErrorMessage = "Vui lòng điền mật khẩu")]
         [StringLength(20)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")]
         public string Password { get; set; }
 
         [StringLength(20)]
+        [Required]
+        [System.ComponentModel.DataAnnotations.Compare("Password")]
         public string confirmPassword { get; set; }
 
         [StringLength(200)]

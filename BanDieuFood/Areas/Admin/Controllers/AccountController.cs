@@ -23,6 +23,7 @@ namespace BanDieuFood.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(User model)
         {
             try
@@ -48,6 +49,17 @@ namespace BanDieuFood.Areas.Admin.Controllers
         }
         public ActionResult Register()
         {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(User model) 
+        {
+            //Nếu model tồn tại
+            if (ModelState.IsValid) 
+            {
+                
+            }
             return View();
         }
     }
