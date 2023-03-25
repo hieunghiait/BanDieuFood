@@ -23,7 +23,7 @@ namespace BanDieuFood.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Login(User model)
         {
             try
