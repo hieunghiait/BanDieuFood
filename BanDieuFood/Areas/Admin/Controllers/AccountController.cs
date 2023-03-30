@@ -2,8 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -11,10 +15,14 @@ namespace BanDieuFood.Areas.Admin.Controllers
 {
     public class AccountController : Controller
     {
-        private BanDieuDbContext _dbContext = new BanDieuDbContext();
-
+        private BanDieuDBContext _dbContext = new BanDieuDBContext();
+        
         // GET: Admin/Account
         public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Test()
         {
             return View();
         }
@@ -23,29 +31,42 @@ namespace BanDieuFood.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(User model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                using (_dbContext)
+                using (_dbContext = new BanDieuDBContext())
                 {
-                    bool IsValidUser = _dbContext.Users.Any(user => user.UserName.ToLower() ==
-                         model.UserName.ToLower() && user.Password == model.Password);
-                    if (IsValidUser)
+                    try
                     {
-                        FormsAuthentication.SetAuthCookie(model.UserName, false);
-                        return RedirectToAction("Index", "HomeAdmin");
+                        var check = _dbContext.Users.Where(a => a.Email.Equals(model.Email) && a.Password.Equals(model.Password)).FirstOrDefault();
+
+                        if (check != null)
+                        {
+                            Session["UserName"] = check.UserName.ToString();
+                            return RedirectToAction("TestPage", "HomeAdmin");
+                        }
+                        else
+                        {
+
+                        }
+
                     }
-                    ModelState.AddModelError("", "Tên tài khoản hoặc mật khẩu không đúng");
-                    return View();
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex.Message);
+                    }
                 }
             }
-            catch(Exception ex) 
-            {
-                ModelState.AddModelError("", $"Có lỗi xảy ra: {ex.Message}");
-                return View();
-            }
+            return View(model);
+        }
+        public ActionResult Logout()
+        {
+            
+            Session.Remove("UserName");
+            Session.Abandon();
+            return View("Login", "Account");
         }
         public ActionResult Register()
         {
@@ -55,12 +76,55 @@ namespace BanDieuFood.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(User model) 
         {
-            //Nếu model tồn tại
-            if (ModelState.IsValid) 
+            _dbContext = new BanDieuDBContext();
+            if (ModelState.IsValid)
             {
-                
+
+                var checkUser = _dbContext.Users.FirstOrDefault(s => s.Email == model.Email);
+                if (checkUser == null)
+                {
+                    _dbContext.Configuration.ValidateOnSaveEnabled = false;
+                    var newUser = new User
+                    {
+                        FullName= model.FullName,   
+                        Email = model.Email,    
+                        UserName = model.UserName,  
+                        Password= model.Password,   
+                        Address= model.Address,
+                        Phone= model.Phone, 
+                    };
+                    //Add model 
+                    _dbContext.Users.Add(model);
+                    //Lưu thay đổi 
+                    _dbContext.SaveChanges();
+                    return RedirectToAction("TestPage", "HomeAdmin");
+                }
+                else
+                {
+                    ViewBag.error = "Email đã tồn tại trong CSDL";
+                    return View();
+                }
             }
-            return View();
+            else
+                {
+                    ModelState.AddModelError(string.Empty, "Email đã tồn tại");
+                }
+            return View("Register", "Account");
+            }
         }
+        //public static string GetMD5(string str)
+        //{
+        //    MD5 md5 = new MD5CryptoServiceProvider();
+        //    byte[] fromData = Encoding.UTF8.GetBytes(str);
+        //    byte[] targetData = md5.ComputeHash(fromData);
+        //    string byte2String = null;
+
+        //    for (int i = 0; i < targetData.Length; i++)
+        //    {
+        //        byte2String += targetData[i].ToString("x2");
+
+        //    }
+        //    return byte2String;
+        //}
+
     }
-}

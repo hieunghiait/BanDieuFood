@@ -9,9 +9,23 @@ namespace BanDieuFood.Areas.Admin.Controllers
     public class HomeAdminController : Controller
     {
         // GET: Admin/Home
-        [Authorize]
+  
         public ActionResult Index()
         {
+            if (Session["Email"] != null)
+            {
+                return View("Index", "HomeAdmin");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            
+        }
+        public ActionResult TestPage()
+        {
+            
             return View();
         }
     }

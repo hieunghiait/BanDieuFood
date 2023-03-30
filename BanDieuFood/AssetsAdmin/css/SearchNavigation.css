@@ -1,0 +1,45 @@
+﻿/* Increase the font size of the search bar placeholder text */
+.form-control::placeholder {
+	font-size: 14px;
+}
+
+/* Style the search button */
+.btn-danger {
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+	.btn-danger:hover {
+		background-color: #c82333;
+		border-color: #bd2130;
+	}
+
+/* Center the search bar */
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+/* Add spacing around the search bar */
+.search {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+/* Add a box-shadow to the search bar on focus */
+.form-control:focus {
+	box-shadow: none;
+	border-color: #dc3545;
+	outline: none;
+}
+
+.input-group-append button:focus {
+	box-shadow: none;
+	border-color: #dc3545;
+	outline: none;
+}
+
+/* Adjust the size of the search icon */
+.fas.fa-search {
+	font-size: 18px;
+}

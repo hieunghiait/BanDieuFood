@@ -1,0 +1,75 @@
+﻿@model BanDieuFood.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết sản phẩm</h2>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Product</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.ProductName)
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Image)
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Unit)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Unit)
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.ShoppingCartID)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.ShoppingCartID)
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Category.CategoryName)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-outline-primary" }) |
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-secondary" })
+    </p>
