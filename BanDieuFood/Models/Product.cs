@@ -1,10 +1,12 @@
-namespace BanDieuFood.Models
+﻿namespace BanDieuFood.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Web.Mvc;
 
     [Table("Product")]
     public partial class Product
@@ -15,23 +17,29 @@ namespace BanDieuFood.Models
             OrderDetails = new HashSet<OrderDetail>();
             ShoppingCarts = new HashSet<ShoppingCart>();
         }
-
+        [Required]
+        [DisplayName("ID")]
         public int ProductID { get; set; }
-
-        [StringLength(50)]
+        [Required]
+        [DisplayName("Tên sản phẩm")]
+        [MinLength(3), MaxLength(50)]
         public string ProductName { get; set; }
-
+        [Required]
         [StringLength(50)]
+        [DisplayName("Hình ảnh")]
         public string Image { get; set; }
-
+        [Required(ErrorMessage = "Vui lòng nhập số lượng")]
+        [DisplayName("Số lượng")]
         public int? Quantity { get; set; }
-
+        [Required(ErrorMessage = "Vui lòng nhập giá tiền")]
+        [DisplayName("Giá tiền")]
         [Column(TypeName = "money")]
         public decimal? Price { get; set; }
-
-        [StringLength(20)]
+        [Required(ErrorMessage = "Vui lòng nhập đơn vị")]
+        [MinLength(3),MaxLength(5)]
+        [DisplayName("Đơn vị")]
         public string Unit { get; set; }
-
+        
         public int? CategoryID { get; set; }
 
         public int? ShoppingCartID { get; set; }

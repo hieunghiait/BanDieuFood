@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace BanDieuFood.Models
 {
-    public partial class BanDieuDbContext : DbContext
+    public partial class BanDieuDBContext : DbContext
     {
-        public BanDieuDbContext()
-            : base("name=BanDieuDB")
+        public BanDieuDBContext()
+            : base("name=BanDieuDBContext1")
         {
         }
 
@@ -41,6 +41,10 @@ namespace BanDieuFood.Models
             modelBuilder.Entity<ShoppingCart>()
                 .Property(e => e.Price)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
 
             modelBuilder.Entity<User>()
                 .HasMany(e => e.UserGroup_Role)

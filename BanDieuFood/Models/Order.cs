@@ -13,6 +13,7 @@ namespace BanDieuFood.Models
         public Order()
         {
             OrderDetails = new HashSet<OrderDetail>();
+            Payments = new HashSet<Payment>();
         }
 
         public int OrderID { get; set; }
@@ -26,9 +27,10 @@ namespace BanDieuFood.Models
 
         public bool? OrderStatus { get; set; }
 
-        public virtual User User { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Payment> Payments { get; set; }
     }
 }

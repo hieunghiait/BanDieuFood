@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BanDieuFood.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>Loại sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null , new { @class = "btn btn-info" } )
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+    </tr>
+
+        @using (Html.BeginForm("Index", "Categories", FormMethod.Get, new { @class = "form-inline" }))
+        {
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        @Html.TextBox("searchString", null, new { @class = "form-control rounded-0", placeholder = "Nhập tên loại sản phẩm" })
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-danger rounded-0"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        }
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+
+            <td class="btn-group">
+                @Html.ActionLink("Sửa", "Edit", new { id = item.CategoryID }, new { @class = "btn btn-sm btn-warning mx-1" })
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.CategoryID }, new { @class = "btn btn-sm btn-info mx-1" })
+                @Html.ActionLink("Xóa", "Delete", new { id = item.CategoryID }, new { @class = "btn btn-sm btn-danger mx-1" })
+            </td>
+        </tr>
+    }
+
+</table>
