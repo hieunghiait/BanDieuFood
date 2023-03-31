@@ -5,77 +5,76 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Xóa sản phẩm</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Product</h4>
+<h3>Bạn có chắc chắn muốn xóa sản phẩm này?</h3>
+<div class="container">
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+    <dl class="row">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.ProductName)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.ProductName)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Image)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Image)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Quantity)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Quantity)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Price)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Unit)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Unit)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.ShoppingCartID)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.ShoppingCartID)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Category.CategoryName)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" class="btn btn btn-outline-success" /> |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-secondary" })
         </div>
     }
 </div>
