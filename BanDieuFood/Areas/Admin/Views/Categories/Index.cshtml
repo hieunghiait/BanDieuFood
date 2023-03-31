@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-<h2>Loại sản phẩm</h2>
+<h2 class="text-center font-weight-bold">Loại sản phẩm</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", null , new { @class = "btn btn-info" } )
+    @Html.ActionLink("Thêm mới loại sản phẩm", "Create", null , new { @class = "btn btn-info" } )
 </p>
 <table class="table">
     <tr>

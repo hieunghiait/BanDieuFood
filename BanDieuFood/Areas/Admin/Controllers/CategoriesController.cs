@@ -17,11 +17,14 @@ namespace BanDieuFood.Areas.Admin.Views
         // GET: Admin/Categories
         public ActionResult Index(string searchString)
         {
+            //Gắn biến keyword
             ViewBag.KeyWord = searchString;
             IQueryable<Category> categories = db.Categories;
             if (!String.IsNullOrEmpty(searchString))
             {
+                //Chuyển ký tự nhập vào thành chữ thường
                 searchString = searchString.ToLower();
+                //Truy vấn vào CSDL tìm xem ký tự nhập vào
                 categories = categories.Where(c => c.CategoryName.ToLower().Contains(searchString));
             }
 

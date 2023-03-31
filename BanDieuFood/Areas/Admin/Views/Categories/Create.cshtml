@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Thêm loại sản phẩm</h2>
+<h2 class="text-center">Thêm loại sản phẩm</h2>
 
 
 @using (Html.BeginForm()) 
@@ -28,12 +28,12 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </div>
+        <div>
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-success"})
+        </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-success"})
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -36,7 +36,6 @@
         [Column(TypeName = "money")]
         public decimal? Price { get; set; }
         [Required(ErrorMessage = "Vui lòng nhập đơn vị")]
-        [MinLength(3),MaxLength(5)]
         [DisplayName("Đơn vị")]
         public string Unit { get; set; }
         

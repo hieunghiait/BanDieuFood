@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -59,9 +60,6 @@ namespace BanDieuFood.Areas.Admin.Controllers
                             break;
                         }
                 }
-
-            
-
             ViewBag.KeyWord = searchString;
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -98,15 +96,29 @@ namespace BanDieuFood.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,ProductName,Image,Quantity,Price,Unit,CategoryID")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,ProductName,Image,Quantity,Price,Unit,CategoryID")] Product product, HttpPostedFileBase fileUpload)
         {
+            var guid = Guid.NewGuid().ToString();
             if (ModelState.IsValid)
             {
+                HttpPostedFileBase file = Request.Files["upload"];
+                if (fileUpload != null && file.ContentLength > 0)
+                {
+                    string filename = Path.GetFileName(file.FileName);
+                    string path = Path.Combine(Server.MapPath("~/AssetsAdmin/img"), guid + filename);
+                    if (System.IO.File.Exists(path))
+                    {
+                        ViewBag.Thongbao = "Vui lòng chọn ảnh";
+                    } else
+                    {
+                        file.SaveAs(path);
+                        product.Image = guid + filename;
+                    }  
+                }
                 db.Products.Add(product);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Products");
             }
-
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
             return View(product);
         }
